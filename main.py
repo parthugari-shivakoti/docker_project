@@ -16,3 +16,11 @@ def about():
 @app.get("/health")
 def health_check():
     return {"status": "healthy"}
+
+@app.get("/products")
+def get_products():
+    return [
+        {"id": 1, "name": "Laptop"},
+        {"id": 2, "name": "Mobile"},
+        {"id": 3, "name": "Keyboard"},
+    ]
